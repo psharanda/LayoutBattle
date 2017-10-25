@@ -7,20 +7,195 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B09C78F1FA0EC9400ACA387 /* LayoutOps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B09C78E1FA0EC7300ACA387 /* LayoutOps.framework */; };
+		1B09C7901FA0EC9400ACA387 /* LayoutOps.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B09C78E1FA0EC7300ACA387 /* LayoutOps.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1B09C7931FA0EC9400ACA387 /* GDPerformanceView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B09C7881FA0EC6400ACA387 /* GDPerformanceView.framework */; };
+		1B09C7941FA0EC9400ACA387 /* GDPerformanceView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B09C7881FA0EC6400ACA387 /* GDPerformanceView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1B09C7971FA0EC9400ACA387 /* EasyPeasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B09C7751FA0EC5900ACA387 /* EasyPeasy.framework */; };
+		1B09C7981FA0EC9400ACA387 /* EasyPeasy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B09C7751FA0EC5900ACA387 /* EasyPeasy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1B09C79B1FA0EC9400ACA387 /* Atributika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B09C75C1FA0EC4F00ACA387 /* Atributika.framework */; };
+		1B09C79C1FA0EC9400ACA387 /* Atributika.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B09C75C1FA0EC4F00ACA387 /* Atributika.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1B4654711E61900B00E9826E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4654701E61900B00E9826E /* AppDelegate.swift */; };
 		1B4654731E61900B00E9826E /* AutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4654721E61900B00E9826E /* AutoLayoutViewController.swift */; };
 		1B4654781E61900B00E9826E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B4654771E61900B00E9826E /* Assets.xcassets */; };
 		1B46547B1E61900B00E9826E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B4654791E61900B00E9826E /* LaunchScreen.storyboard */; };
 		1B4654831E6190B900E9826E /* LayoutOpsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4654821E6190B900E9826E /* LayoutOpsViewController.swift */; };
-		1B4654881E6193AA00E9826E /* Atributika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4654851E6193AA00E9826E /* Atributika.framework */; };
-		1B4654891E6193AA00E9826E /* GDPerformanceView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4654861E6193AA00E9826E /* GDPerformanceView.framework */; };
-		1B46548A1E6193AA00E9826E /* LayoutOps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4654871E6193AA00E9826E /* LayoutOps.framework */; };
 		1BCD84311E656B970006CB6D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD84301E656B970006CB6D /* Model.swift */; };
-		1BCD84331E656D140006CB6D /* EasyPeasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCD84321E656D140006CB6D /* EasyPeasy.framework */; };
 		1BCD84351E6586E80006CB6D /* LoremIpsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD84341E6586E80006CB6D /* LoremIpsum.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1B09C75B1FA0EC4F00ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C7501FA0EC4E00ACA387 /* Atributika.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6D97C1BEFF229002C0205;
+			remoteInfo = "Atributika-iOS";
+		};
+		1B09C75D1FA0EC4F00ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C7501FA0EC4E00ACA387 /* Atributika.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6DA0F1BF000BD002C0205;
+			remoteInfo = "Atributika-macOS";
+		};
+		1B09C75F1FA0EC4F00ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C7501FA0EC4E00ACA387 /* Atributika.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6D9E21BEFFF6E002C0205;
+			remoteInfo = "Atributika-watchOS";
+		};
+		1B09C7611FA0EC4F00ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C7501FA0EC4E00ACA387 /* Atributika.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6D9F01BEFFFBE002C0205;
+			remoteInfo = "Atributika-tvOS";
+		};
+		1B09C7631FA0EC4F00ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C7501FA0EC4E00ACA387 /* Atributika.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6D9861BEFF229002C0205;
+			remoteInfo = "Atributika-iOS Tests";
+		};
+		1B09C7651FA0EC4F00ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C7501FA0EC4E00ACA387 /* Atributika.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DD75027A1C68FCFC006590AF;
+			remoteInfo = "Atributika-macOS Tests";
+		};
+		1B09C7671FA0EC4F00ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C7501FA0EC4E00ACA387 /* Atributika.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DD75028D1C690C7A006590AF;
+			remoteInfo = "Atributika-tvOS Tests";
+		};
+		1B09C7691FA0EC4F00ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C7501FA0EC4E00ACA387 /* Atributika.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B2F838D1E5C98A4009AFBCA;
+			remoteInfo = Demo;
+		};
+		1B09C7741FA0EC5900ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C76B1FA0EC5900ACA387 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0F042CA341E0EDD7E481974BF25F4083;
+			remoteInfo = "EasyPeasy-iOS";
+		};
+		1B09C7761FA0EC5900ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C76B1FA0EC5900ACA387 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E8754BABD6514D2C6D7D7150BB2D6EB8;
+			remoteInfo = "EasyPeasy-macOS";
+		};
+		1B09C7781FA0EC5900ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C76B1FA0EC5900ACA387 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 90A4EDA106CAAD21185B2A5D19E98370;
+			remoteInfo = "Pods-Demo";
+		};
+		1B09C77A1FA0EC5900ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C76B1FA0EC5900ACA387 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1080C917E129DE796518E38F07C5EB2B;
+			remoteInfo = "Pods-Demo macOS";
+		};
+		1B09C77C1FA0EC5900ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C76B1FA0EC5900ACA387 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65F84178E842CBAFFCD967EF900DCBE0;
+			remoteInfo = "Pods-Tests";
+		};
+		1B09C77E1FA0EC5900ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C76B1FA0EC5900ACA387 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 92A3B79F4BEDD8A24CA2FAA6835EE22A;
+			remoteInfo = "Pods-Tests macOS";
+		};
+		1B09C7851FA0EC6400ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C7801FA0EC6400ACA387 /* GDPerformanceView-Swift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4237B6D81E0FE22A0059FF8B;
+			remoteInfo = "GDPerformanceView-Swift";
+		};
+		1B09C7871FA0EC6400ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C7801FA0EC6400ACA387 /* GDPerformanceView-Swift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42C2CBE41E244D6300A96A93;
+			remoteInfo = "GDPerformanceView-iOS";
+		};
+		1B09C78D1FA0EC7300ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C7891FA0EC7300ACA387 /* LayoutOps.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1BAD4FEB1CDF54CA00692E31;
+			remoteInfo = LayoutOps;
+		};
+		1B09C7911FA0EC9400ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C7891FA0EC7300ACA387 /* LayoutOps.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BAD4FEA1CDF54CA00692E31;
+			remoteInfo = LayoutOps;
+		};
+		1B09C7951FA0EC9400ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C7801FA0EC6400ACA387 /* GDPerformanceView-Swift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 42C2CBE31E244D6300A96A93;
+			remoteInfo = "GDPerformanceView-iOS";
+		};
+		1B09C7991FA0EC9400ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C76B1FA0EC5900ACA387 /* Pods.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9063D15D997D53407D512D46F9448E64;
+			remoteInfo = "EasyPeasy-iOS";
+		};
+		1B09C79D1FA0EC9400ACA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B09C7501FA0EC4E00ACA387 /* Atributika.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 52D6D97B1BEFF229002C0205;
+			remoteInfo = "Atributika-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1B09C79F1FA0EC9400ACA387 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1B09C79C1FA0EC9400ACA387 /* Atributika.framework in Embed Frameworks */,
+				1B09C7981FA0EC9400ACA387 /* EasyPeasy.framework in Embed Frameworks */,
+				1B09C7901FA0EC9400ACA387 /* LayoutOps.framework in Embed Frameworks */,
+				1B09C7941FA0EC9400ACA387 /* GDPerformanceView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1B09C7501FA0EC4E00ACA387 /* Atributika.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Atributika.xcodeproj; path = Carthage/Checkouts/Atributika/Atributika.xcodeproj; sourceTree = "<group>"; };
+		1B09C76B1FA0EC5900ACA387 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Carthage/Checkouts/EasyPeasy/Example/Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		1B09C7801FA0EC6400ACA387 /* GDPerformanceView-Swift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "GDPerformanceView-Swift.xcodeproj"; path = "Carthage/Checkouts/GDPerformanceView-Swift/GDPerformanceView-Swift.xcodeproj"; sourceTree = "<group>"; };
+		1B09C7891FA0EC7300ACA387 /* LayoutOps.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LayoutOps.xcodeproj; path = Carthage/Checkouts/LayoutOps/LayoutOps/LayoutOps.xcodeproj; sourceTree = "<group>"; };
 		1B46546D1E61900B00E9826E /* LayoutBattle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayoutBattle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B4654701E61900B00E9826E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B4654721E61900B00E9826E /* AutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutViewController.swift; sourceTree = "<group>"; };
@@ -28,11 +203,7 @@
 		1B46547A1E61900B00E9826E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B46547C1E61900B00E9826E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B4654821E6190B900E9826E /* LayoutOpsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutOpsViewController.swift; sourceTree = "<group>"; };
-		1B4654851E6193AA00E9826E /* Atributika.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Atributika.framework; path = Carthage/Build/iOS/Atributika.framework; sourceTree = "<group>"; };
-		1B4654861E6193AA00E9826E /* GDPerformanceView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GDPerformanceView.framework; path = Carthage/Build/iOS/GDPerformanceView.framework; sourceTree = "<group>"; };
-		1B4654871E6193AA00E9826E /* LayoutOps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LayoutOps.framework; path = Carthage/Build/iOS/LayoutOps.framework; sourceTree = "<group>"; };
 		1BCD84301E656B970006CB6D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		1BCD84321E656D140006CB6D /* EasyPeasy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyPeasy.framework; path = Carthage/Build/iOS/EasyPeasy.framework; sourceTree = "<group>"; };
 		1BCD84341E6586E80006CB6D /* LoremIpsum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremIpsum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,19 +212,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BCD84331E656D140006CB6D /* EasyPeasy.framework in Frameworks */,
-				1B4654881E6193AA00E9826E /* Atributika.framework in Frameworks */,
-				1B4654891E6193AA00E9826E /* GDPerformanceView.framework in Frameworks */,
-				1B46548A1E6193AA00E9826E /* LayoutOps.framework in Frameworks */,
+				1B09C79B1FA0EC9400ACA387 /* Atributika.framework in Frameworks */,
+				1B09C7971FA0EC9400ACA387 /* EasyPeasy.framework in Frameworks */,
+				1B09C78F1FA0EC9400ACA387 /* LayoutOps.framework in Frameworks */,
+				1B09C7931FA0EC9400ACA387 /* GDPerformanceView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B09C7511FA0EC4E00ACA387 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B09C75C1FA0EC4F00ACA387 /* Atributika.framework */,
+				1B09C75E1FA0EC4F00ACA387 /* Atributika.framework */,
+				1B09C7601FA0EC4F00ACA387 /* Atributika.framework */,
+				1B09C7621FA0EC4F00ACA387 /* Atributika.framework */,
+				1B09C7641FA0EC4F00ACA387 /* Atributika-iOS Tests.xctest */,
+				1B09C7661FA0EC4F00ACA387 /* Atributika-macOS Tests.xctest */,
+				1B09C7681FA0EC4F00ACA387 /* Atributika-tvOS Tests.xctest */,
+				1B09C76A1FA0EC4F00ACA387 /* Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B09C76C1FA0EC5900ACA387 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B09C7751FA0EC5900ACA387 /* EasyPeasy.framework */,
+				1B09C7771FA0EC5900ACA387 /* EasyPeasy.framework */,
+				1B09C7791FA0EC5900ACA387 /* Pods_Demo.framework */,
+				1B09C77B1FA0EC5900ACA387 /* Pods_Demo_macOS.framework */,
+				1B09C77D1FA0EC5900ACA387 /* Pods_Tests.framework */,
+				1B09C77F1FA0EC5900ACA387 /* Pods_Tests_macOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B09C7811FA0EC6400ACA387 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B09C7861FA0EC6400ACA387 /* GDPerformanceView-Swift.app */,
+				1B09C7881FA0EC6400ACA387 /* GDPerformanceView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B09C78A1FA0EC7300ACA387 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B09C78E1FA0EC7300ACA387 /* LayoutOps.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		1B4654641E61900B00E9826E = {
 			isa = PBXGroup;
 			children = (
+				1B09C7891FA0EC7300ACA387 /* LayoutOps.xcodeproj */,
+				1B09C7801FA0EC6400ACA387 /* GDPerformanceView-Swift.xcodeproj */,
+				1B09C76B1FA0EC5900ACA387 /* Pods.xcodeproj */,
+				1B09C7501FA0EC4E00ACA387 /* Atributika.xcodeproj */,
 				1B46546F1E61900B00E9826E /* LayoutBattle */,
 				1B46546E1E61900B00E9826E /* Products */,
 				1B4654841E6193AA00E9826E /* Frameworks */,
@@ -86,10 +306,6 @@
 		1B4654841E6193AA00E9826E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1BCD84321E656D140006CB6D /* EasyPeasy.framework */,
-				1B4654851E6193AA00E9826E /* Atributika.framework */,
-				1B4654861E6193AA00E9826E /* GDPerformanceView.framework */,
-				1B4654871E6193AA00E9826E /* LayoutOps.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -104,11 +320,15 @@
 				1B4654691E61900B00E9826E /* Sources */,
 				1B46546A1E61900B00E9826E /* Frameworks */,
 				1B46546B1E61900B00E9826E /* Resources */,
-				1B46548B1E6193B400E9826E /* ShellScript */,
+				1B09C79F1FA0EC9400ACA387 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1B09C7921FA0EC9400ACA387 /* PBXTargetDependency */,
+				1B09C7961FA0EC9400ACA387 /* PBXTargetDependency */,
+				1B09C79A1FA0EC9400ACA387 /* PBXTargetDependency */,
+				1B09C79E1FA0EC9400ACA387 /* PBXTargetDependency */,
 			);
 			name = LayoutBattle;
 			productName = LayoutBattle;
@@ -144,12 +364,152 @@
 			mainGroup = 1B4654641E61900B00E9826E;
 			productRefGroup = 1B46546E1E61900B00E9826E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1B09C7511FA0EC4E00ACA387 /* Products */;
+					ProjectRef = 1B09C7501FA0EC4E00ACA387 /* Atributika.xcodeproj */;
+				},
+				{
+					ProductGroup = 1B09C7811FA0EC6400ACA387 /* Products */;
+					ProjectRef = 1B09C7801FA0EC6400ACA387 /* GDPerformanceView-Swift.xcodeproj */;
+				},
+				{
+					ProductGroup = 1B09C78A1FA0EC7300ACA387 /* Products */;
+					ProjectRef = 1B09C7891FA0EC7300ACA387 /* LayoutOps.xcodeproj */;
+				},
+				{
+					ProductGroup = 1B09C76C1FA0EC5900ACA387 /* Products */;
+					ProjectRef = 1B09C76B1FA0EC5900ACA387 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1B46546C1E61900B00E9826E /* LayoutBattle */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1B09C75C1FA0EC4F00ACA387 /* Atributika.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Atributika.framework;
+			remoteRef = 1B09C75B1FA0EC4F00ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B09C75E1FA0EC4F00ACA387 /* Atributika.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Atributika.framework;
+			remoteRef = 1B09C75D1FA0EC4F00ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B09C7601FA0EC4F00ACA387 /* Atributika.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Atributika.framework;
+			remoteRef = 1B09C75F1FA0EC4F00ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B09C7621FA0EC4F00ACA387 /* Atributika.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Atributika.framework;
+			remoteRef = 1B09C7611FA0EC4F00ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B09C7641FA0EC4F00ACA387 /* Atributika-iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Atributika-iOS Tests.xctest";
+			remoteRef = 1B09C7631FA0EC4F00ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B09C7661FA0EC4F00ACA387 /* Atributika-macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Atributika-macOS Tests.xctest";
+			remoteRef = 1B09C7651FA0EC4F00ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B09C7681FA0EC4F00ACA387 /* Atributika-tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Atributika-tvOS Tests.xctest";
+			remoteRef = 1B09C7671FA0EC4F00ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B09C76A1FA0EC4F00ACA387 /* Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Demo.app;
+			remoteRef = 1B09C7691FA0EC4F00ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B09C7751FA0EC5900ACA387 /* EasyPeasy.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EasyPeasy.framework;
+			remoteRef = 1B09C7741FA0EC5900ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B09C7771FA0EC5900ACA387 /* EasyPeasy.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EasyPeasy.framework;
+			remoteRef = 1B09C7761FA0EC5900ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B09C7791FA0EC5900ACA387 /* Pods_Demo.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_Demo.framework;
+			remoteRef = 1B09C7781FA0EC5900ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B09C77B1FA0EC5900ACA387 /* Pods_Demo_macOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_Demo_macOS.framework;
+			remoteRef = 1B09C77A1FA0EC5900ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B09C77D1FA0EC5900ACA387 /* Pods_Tests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_Tests.framework;
+			remoteRef = 1B09C77C1FA0EC5900ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B09C77F1FA0EC5900ACA387 /* Pods_Tests_macOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_Tests_macOS.framework;
+			remoteRef = 1B09C77E1FA0EC5900ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B09C7861FA0EC6400ACA387 /* GDPerformanceView-Swift.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "GDPerformanceView-Swift.app";
+			remoteRef = 1B09C7851FA0EC6400ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B09C7881FA0EC6400ACA387 /* GDPerformanceView.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GDPerformanceView.framework;
+			remoteRef = 1B09C7871FA0EC6400ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B09C78E1FA0EC7300ACA387 /* LayoutOps.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LayoutOps.framework;
+			remoteRef = 1B09C78D1FA0EC7300ACA387 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1B46546B1E61900B00E9826E /* Resources */ = {
@@ -162,26 +522,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1B46548B1E6193B400E9826E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/LayoutOps.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Atributika.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/GDPerformanceView.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/EasyPeasy.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B4654691E61900B00E9826E /* Sources */ = {
@@ -197,6 +537,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B09C7921FA0EC9400ACA387 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LayoutOps;
+			targetProxy = 1B09C7911FA0EC9400ACA387 /* PBXContainerItemProxy */;
+		};
+		1B09C7961FA0EC9400ACA387 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GDPerformanceView-iOS";
+			targetProxy = 1B09C7951FA0EC9400ACA387 /* PBXContainerItemProxy */;
+		};
+		1B09C79A1FA0EC9400ACA387 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "EasyPeasy-iOS";
+			targetProxy = 1B09C7991FA0EC9400ACA387 /* PBXContainerItemProxy */;
+		};
+		1B09C79E1FA0EC9400ACA387 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Atributika-iOS";
+			targetProxy = 1B09C79D1FA0EC9400ACA387 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1B4654791E61900B00E9826E /* LaunchScreen.storyboard */ = {
@@ -316,6 +679,7 @@
 		1B4654801E61900B00E9826E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3W5V93WN72;
@@ -336,6 +700,7 @@
 		1B4654811E61900B00E9826E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3W5V93WN72;
 				FRAMEWORK_SEARCH_PATHS = (

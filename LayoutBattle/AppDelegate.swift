@@ -26,7 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tbc = UITabBarController()
         
         let vc1 = AutoLayoutViewController()
-    
         
         let vc2 = LayoutOpsViewController()
     

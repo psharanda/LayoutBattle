@@ -40,17 +40,29 @@ class LayoutOpsViewController: UIViewController {
         view.addSubview(tableView)
     }
     
+    private var cancelCaching: (()->Void)?
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         let width = view.frame.width
         
         if width != referenceWidth {
+            
+            cancelCaching?()
+            
             presentationCache = nil
             referenceWidth = width
             
             let dateStart = Date()
             let models = tweets
+            
+            var cancelled = false
+            
+            cancelCaching = {
+                cancelled = true
+            }
+            
             DispatchQueue.global(qos: .background).async {
                 let cachedModels: [(TweetModel, RootNode)] = models.concurrentMap  {
                     let node = LOTweetCell.buildRootNode($0, estimated: false)
@@ -59,20 +71,15 @@ class LayoutOpsViewController: UIViewController {
                 }
                 
                 DispatchQueue.main.async { [weak self] in
-                    print("did cache in \(Date().timeIntervalSince(dateStart))s")
-                    self?.didLoad(presentationCache: cachedModels, width: width)
+                    if !cancelled {
+                        print("did cache in \(Date().timeIntervalSince(dateStart))s")
+                        self?.presentationCache = cachedModels
+                    }
                 }
             }
         }
         
         tableView.lx.fill()
-    }
-    
-    private func didLoad(presentationCache: [(TweetModel, RootNode)], width: CGFloat) {
-        
-        if width == referenceWidth {
-            self.presentationCache = presentationCache
-        }
     }
     
     fileprivate lazy var adapter: TableViewPresentationAdapter = { [unowned self] in
@@ -233,9 +240,7 @@ extension RandomAccessCollection {
         
         DispatchQueue.concurrentPerform(iterations: n) {
             offset in
-            (p + offset).initialize(
-                to: transform(
-                    self[index(startIndex, offsetBy: numericCast(offset))]))
+            (p + offset).initialize(to: transform(self[index(startIndex, offsetBy: numericCast(offset))]))
         }
         
         return Array(UnsafeMutableBufferPointer(start: p, count: n))
