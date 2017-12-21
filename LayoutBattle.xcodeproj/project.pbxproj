@@ -293,8 +293,7 @@
 			children = (
 				1BCD84301E656B970006CB6D /* Model.swift */,
 				1B4654701E61900B00E9826E /* AppDelegate.swift */,
-				1B4654721E61900B00E9826E /* AutoLayoutViewController.swift */,
-				1B4654821E6190B900E9826E /* LayoutOpsViewController.swift */,
+				1BFF32701FEBBECA00CA662E /* ViewController */,
 				1B4654771E61900B00E9826E /* Assets.xcassets */,
 				1B4654791E61900B00E9826E /* LaunchScreen.storyboard */,
 				1B46547C1E61900B00E9826E /* Info.plist */,
@@ -308,6 +307,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1BFF32701FEBBECA00CA662E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1B4654721E61900B00E9826E /* AutoLayoutViewController.swift */,
+				1B4654821E6190B900E9826E /* LayoutOpsViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
