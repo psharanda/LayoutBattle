@@ -119,8 +119,8 @@ class UIView_EasyTests: XCTestCase {
         let viewA = UIView(frame: CGRect.zero)
         superview.addSubview(viewA)
         viewA.easy.layout(
-            BottomMargin(10),
-            TrailingMargin(10),
+            Bottom(10),
+            Trailing(10),
             Width(120),
             Height(300)
         )
@@ -147,8 +147,8 @@ class UIView_EasyTests: XCTestCase {
         let viewB = UIView(frame: CGRect.zero)
         superview.addSubview(viewB)
         viewA.easy.layout(
-            TopMargin(10),
-            LeadingMargin(10),
+            Top(10),
+            Leading(10),
             Width(120),
             Height(300)
         )
@@ -252,19 +252,19 @@ class UIView_EasyTests: XCTestCase {
         let superview = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 1000))
         let viewA = UIView(frame: CGRect.zero)
         superview.addSubview(viewA)
-        viewA <- [
+        viewA.easy.layout(
             Left().when { condition },
             Right().when { condition },
             CenterX().when { !condition },
             Size(20),
             Top()
-        ]
+        )
         XCTAssertTrue(superview.constraints.count == 3)
         XCTAssertTrue(viewA.constraints.count == 2)
         
         // when
         condition = false
-        viewA.easy_reload()
+        viewA.easy.reload()
         
         // then
         XCTAssertTrue(superview.constraints.count == 2)
@@ -276,12 +276,12 @@ class UIView_EasyTests: XCTestCase {
         let superview = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 1000))
         let viewA = UIView(frame: CGRect.zero)
         superview.addSubview(viewA)
-        viewA <- [Left(), Size(20), Top() ]
+        viewA.easy.layout(Left(), Size(20), Top())
         XCTAssertTrue(superview.constraints.count == 2)
         XCTAssertTrue(viewA.constraints.count == 2)
         
         // when
-        viewA.easy_clear()
+        viewA.easy.clear()
         
         // then
         XCTAssertTrue(superview.constraints.count == 0)
@@ -293,7 +293,7 @@ class UIView_EasyTests: XCTestCase {
         let viewA = UIView(frame: CGRect.zero)
         
         // when
-        let constraints = viewA <- Top(100)
+        let constraints = viewA.easy.layout(Top(100))
         
         // then
         XCTAssertTrue(constraints.count == 0)

@@ -1,5 +1,12 @@
 # Changelog
 
+## v.1.8.0
+* Swift 4.2 support.
+
+## v.1.7.0
+
+* Swift 4.1 support.
+
 ## v.1.6.0
 
 * Deprecated `<-` operator and the methods `easy_clear` and `easy_reload` in favour of

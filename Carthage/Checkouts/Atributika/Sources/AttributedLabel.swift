@@ -4,20 +4,20 @@
 //
 import Foundation
 
-#if os(iOS) || os(tvOS)
+#if os(iOS)
     
 import UIKit
 
-public class AttributedLabel: UIView {
+open class AttributedLabel: UIView {
     
     //MARK: - private properties
     private let label = UILabel()
     private var detectionAreaButtons = [DetectionAreaButton]()
     
     //MARK: - public properties
-    public var onClick: ((AttributedLabel, Detection)->Void)?
+    open var onClick: ((AttributedLabel, Detection)->Void)?
     
-    public var isEnabled: Bool {
+    open var isEnabled: Bool {
         set {
             detectionAreaButtons.forEach { $0.isUserInteractionEnabled = newValue  }
             state.isEnabled = newValue
@@ -27,7 +27,7 @@ public class AttributedLabel: UIView {
         }
     }
     
-    public var attributedText: AttributedText? {
+    open var attributedText: AttributedText? {
         set {
             state.attributedTextAndString = newValue.map { ($0, $0.attributedString) }
             setNeedsLayout()
@@ -38,38 +38,46 @@ public class AttributedLabel: UIView {
     }
     
     //MARK: - public properties redirected to underlying UILabel
-    public var font: UIFont {
-        set { label.font = newValue }
+    private func changeLabel(handler: (UILabel)->Void) {
+        let attributedText = label.attributedText
+        label.attributedText = nil
+        handler(label)
+        label.attributedText = attributedText
+        setNeedsLayout()
+    }
+    
+    open var font: UIFont {
+        set { changeLabel {  $0.font = newValue } }
         get { return label.font }
     }
     
-    public var numberOfLines: Int {
-        set { label.numberOfLines = newValue }
+    open var numberOfLines: Int {
+        set { changeLabel {  $0.numberOfLines = newValue } }
         get { return label.numberOfLines }
     }
     
-    public var textAlignment: NSTextAlignment {
-        set { label.textAlignment = newValue }
+    open var textAlignment: NSTextAlignment {
+        set { changeLabel {  $0.textAlignment = newValue } }
         get { return label.textAlignment }
     }
     
-    public var lineBreakMode: NSLineBreakMode {
-        set { label.lineBreakMode = newValue }
+    open var lineBreakMode: NSLineBreakMode {
+        set { changeLabel {  $0.lineBreakMode = newValue } }
         get { return label.lineBreakMode }
     }
     
-    public var textColor: UIColor {
-        set { label.textColor = newValue }
+    open var textColor: UIColor {
+        set { changeLabel {  $0.textColor = newValue } }
         get { return label.textColor }
     }
     
-    public var shadowColor: UIColor? {
-        set { label.shadowColor = newValue }
+    open var shadowColor: UIColor? {
+        set { changeLabel {  $0.shadowColor = newValue } }
         get { return label.shadowColor }
     }
     
-    public var shadowOffset: CGSize {
-        set { label.shadowOffset = newValue }
+    open var shadowOffset: CGSize {
+        set { changeLabel {  $0.shadowOffset = newValue } }
         get { return label.shadowOffset }
     }
     
@@ -86,13 +94,15 @@ public class AttributedLabel: UIView {
     
     private func commonInit() {
         addSubview(label)
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[label]|", options: [], metrics: nil, views: ["label": label]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label]|", options: [], metrics: nil, views: ["label": label]))
     }
     
     //MARK: - overrides
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
-        
-        label.frame = bounds
         
         detectionAreaButtons.forEach {
             $0.removeFromSuperview()
@@ -125,18 +135,22 @@ public class AttributedLabel: UIView {
                 layoutManager.enumerateEnclosingRects(forGlyphRange: nsrange, withinSelectedGlyphRange: NSRange(location: NSNotFound, length: 0), in: textContainer, using: { (rect, stop) in
                     var finalRect = rect
                     finalRect.origin.y += dy
-                    self.addDetectionAreaButton(frame: finalRect, detection: detection)
+                    self.addDetectionAreaButton(frame: finalRect, detection: detection, text: String(inheritedString.string[detection.range]))
                 })
             }
         }
     }
     
-    public override func sizeThatFits(_ size: CGSize) -> CGSize {
+    open override func sizeThatFits(_ size: CGSize) -> CGSize {
         return label.sizeThatFits(size)
+    }
+    
+    open override var intrinsicContentSize: CGSize {
+        return label.intrinsicContentSize
     }
 
     //MARK: - DetectionAreaButton
-    private class DetectionAreaButton: UIControl {
+    private class DetectionAreaButton: UIButton {
         
         var onHighlightChanged: ((DetectionAreaButton)->Void)?
         
@@ -144,11 +158,14 @@ public class AttributedLabel: UIView {
         init(detection: Detection) {
             self.detection = detection
             super.init(frame: .zero)
+            self.isExclusiveTouch = true
         }
         
         override var isHighlighted: Bool {
             didSet {
-                onHighlightChanged?(self)
+                if (isHighlighted && isTracking) || !isHighlighted {
+                    onHighlightChanged?(self)
+                }
             }
         }
         
@@ -157,8 +174,16 @@ public class AttributedLabel: UIView {
         }
     }
     
-    private func addDetectionAreaButton(frame: CGRect, detection: Detection) {
+    private func addDetectionAreaButton(frame: CGRect, detection: Detection, text: String) {
         let button = DetectionAreaButton(detection: detection)
+        button.accessibilityLabel = text
+        button.isAccessibilityElement = true
+        #if swift(>=4.2)
+        button.accessibilityTraits = UIAccessibilityTraits.button
+        #else
+        button.accessibilityTraits = UIAccessibilityTraitButton
+        #endif
+        
         button.isUserInteractionEnabled = state.isEnabled
         button.addTarget(self, action: #selector(handleDetectionAreaButtonClick), for: .touchUpInside)
         detectionAreaButtons.append(button)
@@ -211,12 +236,12 @@ public class AttributedLabel: UIView {
 
 extension NSAttributedString {
     
-    func withInherited(font: UIFont, textAlignment: NSTextAlignment) -> NSAttributedString {
+    fileprivate func withInherited(font: UIFont, textAlignment: NSTextAlignment) -> NSAttributedString {
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = textAlignment
         
-        let inheritedAttributes = [NSAttributedStringKey.font: font as Any, NSAttributedStringKey.paragraphStyle: paragraphStyle as Any]
+        let inheritedAttributes = [AttributedStringKey.font: font as Any, AttributedStringKey.paragraphStyle: paragraphStyle as Any]
         let result = NSMutableAttributedString(string: string, attributes: inheritedAttributes)
         
         result.beginEditing()

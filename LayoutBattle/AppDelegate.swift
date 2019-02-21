@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         
-        GDPerformanceMonitor.sharedInstance.startMonitoring()
+        PerformanceMonitor.shared().start()
         
         return true
     }

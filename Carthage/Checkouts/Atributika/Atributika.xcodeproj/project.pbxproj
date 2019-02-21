@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B2E55D92192FC8100D2B934 /* HTMLSpecials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E55D82192FC8100D2B934 /* HTMLSpecials.swift */; };
+		1B2E55DA219321FB00D2B934 /* HTMLSpecials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E55D82192FC8100D2B934 /* HTMLSpecials.swift */; };
+		1B2E55DB219321FB00D2B934 /* HTMLSpecials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E55D82192FC8100D2B934 /* HTMLSpecials.swift */; };
+		1B2E55DC219321FB00D2B934 /* HTMLSpecials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E55D82192FC8100D2B934 /* HTMLSpecials.swift */; };
 		1B2F83901E5C98A4009AFBCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2F838F1E5C98A4009AFBCA /* AppDelegate.swift */; };
 		1B2F83921E5C98A4009AFBCA /* SnippetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2F83911E5C98A4009AFBCA /* SnippetsViewController.swift */; };
 		1B2F83971E5C98A4009AFBCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B2F83961E5C98A4009AFBCA /* Assets.xcassets */; };
@@ -34,9 +38,6 @@
 		1BB55AE21E5C73F000CE6EAD /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55AD01E5C73EF00CE6EAD /* Style.swift */; };
 		1BB55AE31E5C73F000CE6EAD /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55AD01E5C73EF00CE6EAD /* Style.swift */; };
 		1BB55AE41E5C73F000CE6EAD /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55AD01E5C73EF00CE6EAD /* Style.swift */; };
-		1BBEEEB31F97C63C00AEC797 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38369F1F97C224001DB333 /* AttributedLabel.swift */; };
-		1BBEEEB41F97C93100AEC797 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38369F1F97C224001DB333 /* AttributedLabel.swift */; };
-		1BBEEEB51F97C93100AEC797 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38369F1F97C224001DB333 /* AttributedLabel.swift */; };
 		1BDDF5691E683A8F006374F6 /* Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDF5681E683A8F006374F6 /* Snippet.swift */; };
 		1BDDF56B1E6841EA006374F6 /* AttributedLabelDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDF56A1E6841EA006374F6 /* AttributedLabelDemoViewController.swift */; };
 		52D6D9871BEFF229002C0205 /* Atributika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* Atributika.framework */; };
@@ -93,6 +94,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1B2E55D82192FC8100D2B934 /* HTMLSpecials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HTMLSpecials.swift; path = Sources/HTMLSpecials.swift; sourceTree = "<group>"; };
 		1B2F838D1E5C98A4009AFBCA /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2F838F1E5C98A4009AFBCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B2F83911E5C98A4009AFBCA /* SnippetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetsViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				1BB55ACD1E5C73EF00CE6EAD /* NSAttributedString+Utils.swift */,
 				1BB55ACE1E5C73EF00CE6EAD /* NSScanner+Swift.swift */,
 				1BB55ACF1E5C73EF00CE6EAD /* String+Detection.swift */,
+				1B2E55D82192FC8100D2B934 /* HTMLSpecials.swift */,
 				1BB55AC11E5C6F2400CE6EAD /* Tests */,
 				52D6D99C1BEFF38C002C0205 /* Configs */,
 				1B2F838E1E5C98A4009AFBCA /* Demo */,
@@ -447,16 +450,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Atributika;
 				TargetAttributes = {
 					1B2F838C1E5C98A4009AFBCA = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					52D6D97B1BEFF229002C0205 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 					};
 					52D6D9851BEFF229002C0205 = {
 						CreatedOnToolsVersion = 7.1;
@@ -464,23 +468,23 @@
 					};
 					52D6D9E11BEFFF6E002C0205 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1000;
 					};
 					52D6D9EF1BEFFFBE002C0205 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1000;
 					};
 					52D6DA0E1BF000BD002C0205 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1000;
 					};
 					DD7502791C68FCFC006590AF = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1000;
 					};
 					DD75028C1C690C7A006590AF = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -586,6 +590,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B2E55D92192FC8100D2B934 /* HTMLSpecials.swift in Sources */,
 				1BB55AD91E5C73F000CE6EAD /* NSScanner+Swift.swift in Sources */,
 				1BB55AD11E5C73EF00CE6EAD /* AttributedText.swift in Sources */,
 				1B3836A01F97C224001DB333 /* AttributedLabel.swift in Sources */,
@@ -609,7 +614,7 @@
 			files = (
 				1BB55ADB1E5C73F000CE6EAD /* NSScanner+Swift.swift in Sources */,
 				1BB55AD31E5C73F000CE6EAD /* AttributedText.swift in Sources */,
-				1BBEEEB51F97C93100AEC797 /* AttributedLabel.swift in Sources */,
+				1B2E55DB219321FB00D2B934 /* HTMLSpecials.swift in Sources */,
 				1BB55ADF1E5C73F000CE6EAD /* String+Detection.swift in Sources */,
 				1BB55AD71E5C73F000CE6EAD /* NSAttributedString+Utils.swift in Sources */,
 				1BB55AE31E5C73F000CE6EAD /* Style.swift in Sources */,
@@ -622,7 +627,7 @@
 			files = (
 				1BB55ADC1E5C73F000CE6EAD /* NSScanner+Swift.swift in Sources */,
 				1BB55AD41E5C73F000CE6EAD /* AttributedText.swift in Sources */,
-				1BBEEEB31F97C63C00AEC797 /* AttributedLabel.swift in Sources */,
+				1B2E55DC219321FB00D2B934 /* HTMLSpecials.swift in Sources */,
 				1BB55AE01E5C73F000CE6EAD /* String+Detection.swift in Sources */,
 				1BB55AD81E5C73F000CE6EAD /* NSAttributedString+Utils.swift in Sources */,
 				1BB55AE41E5C73F000CE6EAD /* Style.swift in Sources */,
@@ -635,7 +640,7 @@
 			files = (
 				1BB55ADA1E5C73F000CE6EAD /* NSScanner+Swift.swift in Sources */,
 				1BB55AD21E5C73EF00CE6EAD /* AttributedText.swift in Sources */,
-				1BBEEEB41F97C93100AEC797 /* AttributedLabel.swift in Sources */,
+				1B2E55DA219321FB00D2B934 /* HTMLSpecials.swift in Sources */,
 				1BB55ADE1E5C73F000CE6EAD /* String+Detection.swift in Sources */,
 				1BB55AD61E5C73F000CE6EAD /* NSAttributedString+Utils.swift in Sources */,
 				1BB55AE21E5C73F000CE6EAD /* Style.swift in Sources */,
@@ -703,6 +708,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -721,6 +727,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -743,12 +750,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -800,12 +809,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
